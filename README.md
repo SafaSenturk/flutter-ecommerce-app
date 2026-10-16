@@ -1,10 +1,14 @@
 <div align="center">
 
-<img src="docs/banner.png" alt="NovaShop – Flutter e-commerce app" width="100%" />
+<img src="docs/banner.png" alt="NovaShop – Flutter e-ticaret uygulaması" width="100%" />
 
-# NovaShop · Flutter E-commerce App
+# NovaShop · Flutter E-ticaret Uygulaması
 
-A production-style shopping app: product catalog with search, filters and infinite scroll, favorites, a persistent cart with coupons, and a three-step demo checkout.
+Gerçek bir mağaza uygulaması gibi çalışan bir alışveriş uygulaması:
+- Arama, filtreler ve sonsuz kaydırmalı ürün kataloğu.
+- Favoriler.
+- Kuponlu ve cihazda saklanan sepet.
+- Üç adımlı demo ödeme.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.44-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.12-0175C2?logo=dart&logoColor=white)](https://dart.dev)
@@ -12,7 +16,7 @@ A production-style shopping app: product catalog with search, filters and infini
 [![CI](https://github.com/SafaSenturk/flutter-ecommerce-app/actions/workflows/ci.yml/badge.svg)](https://github.com/SafaSenturk/flutter-ecommerce-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-**[⬇️ Download the APK](https://github.com/SafaSenturk/flutter-ecommerce-app/releases/latest)** · [🇹🇷 Türkçe açıklama](#-türkçe)
+**[⬇️ APK'yı indir](https://github.com/SafaSenturk/flutter-ecommerce-app/releases/latest)** · [🇬🇧 English](#-english)
 
 </div>
 
@@ -21,48 +25,190 @@ A production-style shopping app: product catalog with search, filters and infini
 ## Demo
 
 <p align="center">
-  <img src="docs/demo.gif" alt="Browsing, adding to cart, applying a coupon and paying" width="300" />
+  <img src="docs/demo.gif" alt="Ürünlere göz atma, sepete ekleme, kupon uygulama ve ödeme" width="300" />
 </p>
 
-<p align="center"><i>Browse → product details → add to cart → coupon → address → card payment → order confirmed</i></p>
+<p align="center"><i>Ürünlere göz at → ürün detayı → sepete ekle → kupon → adres → kartla ödeme → sipariş onaylandı</i></p>
 
-## Features
+## Özellikler
 
-**Catalog**
-- Product grid with **infinite scroll**, pull-to-refresh and skeleton (shimmer) loading
-- **Debounced search**, category chips and an auto-rotating promo carousel
-- **Filter sheet**: sort (recommended, biggest discount, price, name), price range, minimum rating, in-stock only
-- Product page with image gallery, **Hero animation**, stock status, details and customer reviews
+**Katalog**
+- **Sonsuz kaydırmalı** ürün ızgarası, aşağı çekerek yenileme ve iskelet (shimmer) yükleme.
+- **Gecikmeli (debounce) arama**, kategori çipleri ve kendiliğinden dönen kampanya afişleri.
+- **Filtre paneli:**
+  - Sıralama: önerilen, en yüksek indirim, fiyat, ad.
+  - Fiyat aralığı.
+  - En düşük puan.
+  - Sadece stoktakiler.
+- **Ürün sayfası:**
+  - Görsel galerisi ve **Hero animasyonu**.
+  - Stok durumu ve detaylar.
+  - Müşteri yorumları.
 
-**Cart & favorites**
-- Favorites and cart are **saved on the device** and survive app restarts
-- Quantity stepper, **swipe to delete with undo**, live totals
-- Free-shipping progress bar and **coupon codes** (`NOVA10`, `FLUTTER20`)
+**Sepet ve favoriler**
+- Favoriler ve sepet **cihazda saklanır**; uygulama kapanıp açılsa da kaybolmaz.
+- Adet değiştirme, **kaydırarak silme ve geri alma**, anlık toplam.
+- Ücretsiz kargo çubuğu ve **kupon kodları** (`NOVA10`, `FLUTTER20`).
 
-**Checkout (demo)**
-- Three-step flow: address form with validation → card payment → confirmation
-- **Animated credit card** that detects the brand (Visa, Mastercard, Amex, Troy) and flips to show the CVV
-- Real-world checks: **Luhn** card number validation, expiry date, CVV length per brand
-- Test cards: `4242 4242 4242 4242` succeeds, `4000 0000 0000 0002` is declined — no real payment is ever taken
-- Order history with delivery address and payment summary
+**Ödeme (demo)**
+- Üç adım: doğrulamalı adres formu → kartla ödeme → onay.
+- Markayı tanıyan (Visa, Mastercard, Amex, Troy) ve CVV için dönen **animasyonlu kredi kartı**.
+- Gerçek dünyadaki kontroller:
+  - **Luhn** algoritmasıyla kart numarası doğrulama.
+  - Son kullanma tarihi kontrolü.
+  - Markaya göre CVV uzunluğu.
+- Test kartları:
+  - `4242 4242 4242 4242` başarılı olur.
+  - `4000 0000 0000 0002` reddedilir.
+  - Hiçbir zaman gerçek ödeme alınmaz.
+- Teslimat adresi ve ödeme özetiyle sipariş geçmişi.
 
-**Quality**
-- **Turkish and English** (switch in Profile, follows the device by default)
-- **Light and dark theme**
-- Every network screen handles **loading, empty and error states** with a retry button (offline, timeout and server errors get their own message)
-- Unit tests for pricing, cart logic, filters and card validation; GitHub Actions runs `analyze` + `test` on every push
+**Kalite**
+- **Türkçe ve İngilizce**: Profil'den değiştirilir, varsayılan olarak cihazın dilini izler.
+- **Açık ve koyu tema**.
+- İnternetten veri çeken her ekranda **yükleniyor, boş ve hata durumları** var, "Tekrar dene" düğmesiyle. İnternet yok, zaman aşımı ve sunucu hatası için ayrı mesajlar gösterilir.
+- Testler ve CI:
+  - Fiyatlandırma, sepet mantığı, filtreler ve kart doğrulama için birim testleri.
+  - GitHub Actions her push'ta `analyze` ve `test` çalıştırır.
 
-## Screenshots
+## Ekran görüntüleri
 
-| Home | Product | Filters | Results |
+| Ana sayfa | Ürün | Filtreler | Sonuçlar |
 |:---:|:---:|:---:|:---:|
 | <img src="docs/screenshots/01_home.jpg" width="200"/> | <img src="docs/screenshots/02_detail.jpg" width="200"/> | <img src="docs/screenshots/03_filters.jpg" width="200"/> | <img src="docs/screenshots/04_filtered.jpg" width="200"/> |
-| **Cart + coupon** | **Address** | **Payment** | **CVV (card flips)** |
+| **Sepet + kupon** | **Adres** | **Ödeme** | **CVV (kart döner)** |
 | <img src="docs/screenshots/05_cart.jpg" width="200"/> | <img src="docs/screenshots/06_checkout.jpg" width="200"/> | <img src="docs/screenshots/07_payment.jpg" width="200"/> | <img src="docs/screenshots/08_cvv.jpg" width="200"/> |
-| **Order confirmed** | **Order history** | **Dark · Turkish** | **Dark · Turkish** |
+| **Sipariş onaylandı** | **Sipariş geçmişi** | **Koyu · Türkçe** | **Koyu · Türkçe** |
 | <img src="docs/screenshots/09_success.jpg" width="200"/> | <img src="docs/screenshots/10_orders.jpg" width="200"/> | <img src="docs/screenshots/12_home_dark_tr.jpg" width="200"/> | <img src="docs/screenshots/13_cart_dark_tr.jpg" width="200"/> |
 
-## Tech stack
+## Teknolojiler
+
+| Alan | Seçim |
+|---|---|
+| Arayüz | Flutter 3.44, Material 3, özel tasarım token'ları (`ThemeExtension`), uygulamaya gömülü Plus Jakarta Sans |
+| State management | **Riverpod 3** (`Notifier`, `AsyncNotifier`, `FutureProvider.family`) |
+| Gezinme | `StatefulShellRoute` ile **go_router** (her sekme kendi geçmişini tutar), route guard'lar |
+| Ağ | **Dio** + kullanıcı dostu mesajlara çevrilen tek bir `AppException` türü |
+| Veri | [DummyJSON](https://dummyjson.com) ürün API'si (194 ürün, 24 kategori) |
+| Saklama | `shared_preferences` (sepet, favoriler, siparişler, ayarlar) |
+| Görseller | `cached_network_image` |
+| Yerelleştirme | `flutter_localizations` + ARB dosyaları (`gen-l10n`), Türkçe ve İngilizce |
+| Test / CI | `flutter_test`, GitHub Actions |
+
+## Mimari
+
+Klasörler özelliğe göre ayrılır. Her özellik üç katmanı ayrı tutar, böylece iş kuralları Flutter olmadan test edilebilir:
+- **domain:** sade Dart modelleri ve mantık.
+- **application:** Riverpod controller'ları.
+- **presentation:** widget'lar.
+
+```
+lib/
+├── main.dart                 # ProviderScope, tema, yerelleştirme, router
+├── core/
+│   ├── network/              # Dio istemcisi + AppException
+│   ├── router/               # go_router ayarları, alt gezinme kabuğu
+│   ├── storage/              # SharedPreferences provider'ı
+│   ├── theme/                # Açık/koyu tema + tasarım token'ları
+│   ├── utils/                # Para/tarih biçimleme, Türkçe kategori adları
+│   └── widgets/              # Shimmer, hata/boş ekranlar, fiyat etiketi, adet seçici…
+├── features/
+│   ├── catalog/              # Ürünler: repository, sorgu + sonsuz liste, ekranlar
+│   ├── cart/                 # Sepet durumu, fiyat özeti (kargo, kuponlar)
+│   ├── favorites/
+│   ├── checkout/             # Adres, kart doğrulama (Luhn), ödeme, onay
+│   ├── orders/
+│   └── settings/             # Dil ve tema, profil ekranı
+└── l10n/                     # app_en.arb, app_tr.arb (+ üretilen kod)
+```
+
+**Ürün listesi nasıl çalışıyor?**
+- Kullanıcının filtreleri değiştirilemez (immutable) tek bir `ProductQuery` nesnesinde durur.
+- `ProductFeedNotifier` onu izler. Kategori, arama ya da sıralama değişince ilk sayfa kendiliğinden yeniden yüklenir.
+- Kategori, arama ve sıralama API'ye gider; fiyat ve puan cihazda filtrelenir.
+- Notifier, ekranda yeterli sayıda eşleşen ürün olana kadar yeni sayfa yüklemeye devam eder.
+
+## Kendin çalıştır
+
+```bash
+git clone https://github.com/SafaSenturk/flutter-ecommerce-app.git
+cd flutter-ecommerce-app
+flutter pub get
+flutter run
+```
+
+```bash
+flutter test      # 19 birim testi
+flutter analyze   # sıkı lint kuralları, sorun yok
+```
+
+API anahtarı gerekmez. Sürüm derlemeleri, `android/key.properties` varsa yerel anahtarla imzalanır; yoksa debug anahtarına geçer.
+
+**Denemek için:** [Releases](https://github.com/SafaSenturk/flutter-ecommerce-app/releases/latest) sayfasından APK'yı indirip Android telefonuna kurabilirsin.
+
+Bu tarz bir uygulamaya mı ihtiyacın var? Kendi ürünlerin, ödeme altyapın ve tasarımınla yapabilirim: **[safasenturk.github.io](https://safasenturk.github.io)**
+
+### 🧩 Bu projeden çıkan eklentiler
+
+Bu uygulamadaki şu parçaları başka projelerde de kullanılabilsin diye **[Plugins](https://github.com/SafaSenturk/Plugins)** reposuna ekledim. Oradan erişip kendi projene kopyalayabilirsin:
+
+- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/flutter-payment-card)**: Luhn, marka, son kullanma ve CVV doğrulama + CVV'de dönen animasyonlu kart.
+- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/flutter-motion-kit)**: yükleniyor iskeleti (Shimmer), boş/hata ekranı (MessageView) ve diğer hareketli parçalar.
+
+---
+
+## 🇬🇧 English
+
+**NovaShop** is a production-style shopping app:
+- A product catalog with search, filters and infinite scroll.
+- Favorites.
+- A persistent cart with coupons.
+- A three-step demo checkout.
+
+The demo and screenshots are shown above. **[⬇️ Download the APK](https://github.com/SafaSenturk/flutter-ecommerce-app/releases/latest)**
+
+### Features
+
+**Catalog**
+- Product grid with **infinite scroll**, pull-to-refresh and skeleton (shimmer) loading.
+- **Debounced search**, category chips and an auto-rotating promo carousel.
+- **Filter sheet:**
+  - Sort: recommended, biggest discount, price, name.
+  - Price range.
+  - Minimum rating.
+  - In stock only.
+- **Product page:**
+  - Image gallery and **Hero animation**.
+  - Stock status and details.
+  - Customer reviews.
+
+**Cart & favorites**
+- Favorites and cart are **saved on the device** and survive app restarts.
+- Quantity stepper, **swipe to delete with undo**, live totals.
+- Free-shipping progress bar and **coupon codes** (`NOVA10`, `FLUTTER20`).
+
+**Checkout (demo)**
+- Three-step flow: address form with validation → card payment → confirmation.
+- **Animated credit card** that detects the brand (Visa, Mastercard, Amex, Troy) and flips to show the CVV.
+- Real-world checks:
+  - **Luhn** card number validation.
+  - Expiry date check.
+  - CVV length per brand.
+- Test cards:
+  - `4242 4242 4242 4242` succeeds.
+  - `4000 0000 0000 0002` is declined.
+  - No real payment is ever taken.
+- Order history with delivery address and payment summary.
+
+**Quality**
+- **Turkish and English**: switch in Profile; follows the device by default.
+- **Light and dark theme**.
+- Every network screen handles **loading, empty and error states** with a retry button. Offline, timeout and server errors each get their own message.
+- Tests and CI:
+  - Unit tests for pricing, cart logic, filters and card validation.
+  - GitHub Actions runs `analyze` and `test` on every push.
+
+### Tech stack
 
 | Area | Choice |
 |---|---|
@@ -76,77 +222,48 @@ A production-style shopping app: product catalog with search, filters and infini
 | Localization | `flutter_localizations` + ARB files (`gen-l10n`), Turkish & English |
 | Testing / CI | `flutter_test`, GitHub Actions |
 
-## Architecture
+### Architecture
 
-Feature-first folders; each feature keeps its **domain** (plain Dart models and logic), **application** (Riverpod controllers) and **presentation** (widgets) apart, so business rules can be tested without Flutter.
+Folders are organised by feature. Each feature keeps three layers apart, so business rules can be tested without Flutter:
+- **domain:** plain Dart models and logic.
+- **application:** Riverpod controllers.
+- **presentation:** widgets.
 
-```
-lib/
-├── main.dart                 # ProviderScope, theme, localization, router
-├── core/
-│   ├── network/              # Dio client + AppException
-│   ├── router/               # go_router config, bottom-navigation shell
-│   ├── storage/              # SharedPreferences provider
-│   ├── theme/                # Light/dark theme + design tokens
-│   ├── utils/                # Money/date formatting, Turkish category names
-│   └── widgets/              # Shimmer, error/empty views, price tag, stepper…
-├── features/
-│   ├── catalog/              # Products: repository, query + infinite feed, screens
-│   ├── cart/                 # Cart state, price summary (shipping, coupons)
-│   ├── favorites/
-│   ├── checkout/             # Address, card validation (Luhn), payment, success
-│   ├── orders/
-│   └── settings/             # Language & theme, profile screen
-└── l10n/                     # app_en.arb, app_tr.arb (+ generated code)
-```
+The folder tree is shown in the Turkish section above.
 
-How the product feed works: the user's filters live in one immutable `ProductQuery`. `ProductFeedNotifier` watches it, so any change (category, search, sort) automatically refetches page one. Category, search and sort go to the API; price and rating are filtered on the device, and the notifier keeps loading pages until enough matching products are on screen.
+**How the product feed works**
+- The user's filters live in one immutable `ProductQuery`.
+- `ProductFeedNotifier` watches it, so any change (category, search, sort) automatically refetches page one.
+- Category, search and sort go to the API; price and rating are filtered on the device.
+- The notifier keeps loading pages until enough matching products are on screen.
 
-## Run it yourself
+### Run it yourself
 
 ```bash
 git clone https://github.com/SafaSenturk/flutter-ecommerce-app.git
 cd flutter-ecommerce-app
 flutter pub get
 flutter run
-```
-
-```bash
 flutter test      # 19 unit tests
-flutter analyze   # strict lints, no issues
 ```
 
 No API keys are needed. Release builds are signed with a local key when `android/key.properties` exists and fall back to debug keys otherwise.
 
----
+Need an app like this, with your own products, payment provider and design? **[safasenturk.github.io](https://safasenturk.github.io)**
 
-## 🇹🇷 Türkçe
+### 🧩 Reusable plugins from this app
 
-**NovaShop**, gerçek bir mağaza uygulamasında olması gereken her şeyi gösteren bir Flutter e-ticaret uygulamasıdır.
+These parts of the app are available in the **[Plugins](https://github.com/SafaSenturk/Plugins)** repo, ready to copy into your own project:
 
-**Neler var?**
-- Sonsuz kaydırmalı ürün listesi, anlık arama, kategori çipleri ve kampanya afişleri
-- Filtre paneli: sıralama, fiyat aralığı, en düşük puan, sadece stoktakiler
-- Ürün sayfası: görsel galerisi, Hero animasyonu, stok durumu, detaylar ve yorumlar
-- Cihazda saklanan **favoriler** ve **sepet** (uygulama kapansa da kaybolmaz)
-- Sepette adet değiştirme, kaydırarak silme ve geri alma, ücretsiz kargo çubuğu, **kupon kodu** (`NOVA10`, `FLUTTER20`)
-- 3 adımlı **demo ödeme**: adres formu → kart bilgileri → sipariş onayı. Kart markasını tanıyan, CVV'de dönen animasyonlu kart; Luhn algoritmasıyla kart doğrulama. Gerçek ödeme alınmaz.
-- Sipariş geçmişi
-- **Türkçe / İngilizce** dil seçeneği, **açık / koyu tema**
-- Her ekranda yükleniyor, boş ve hata durumları (internet yok, zaman aşımı, sunucu hatası) ve "Tekrar dene" düğmesi
-
-**Teknik:** Flutter 3.44 · Riverpod 3 · go_router · Dio · SharedPreferences · ARB ile yerelleştirme · birim testleri · GitHub Actions
-
-**Denemek için:** [Releases](https://github.com/SafaSenturk/flutter-ecommerce-app/releases/latest) sayfasından APK'yı indirip Android telefonuna kurabilirsin.
-
-Bu tarz bir uygulamaya ihtiyacın varsa (kendi ürünlerin, kendi ödeme altyapın, kendi tasarımın ile) benimle iletişime geçebilirsin: **[safasenturk.github.io](https://safasenturk.github.io)**
+- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/flutter-payment-card)**: Luhn, brand, expiry and CVV validation + the animated card that flips for the CVV.
+- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/flutter-motion-kit)**: loading skeletons (Shimmer), empty/error views (MessageView) and other motion widgets.
 
 ---
 
 <div align="center">
 
-Built by **[Safa Şentürk](https://github.com/SafaSenturk)** · Flutter Mobile Developer · [Portfolio](https://safasenturk.github.io)
+**[Safa Şentürk](https://github.com/SafaSenturk)** · Flutter Mobil Geliştirici · Flutter Mobile Developer · [Portföy / Portfolio](https://safasenturk.github.io)
 
-<sub>Product data and images come from the public <a href="https://dummyjson.com">DummyJSON</a> API and are used for demonstration only.</sub>
+<sub>Ürün verileri ve görselleri herkese açık <a href="https://dummyjson.com">DummyJSON</a> API'sinden gelir ve yalnızca tanıtım amaçlı kullanılır. · Product data and images come from the public DummyJSON API and are used for demonstration only.</sub>
 
 </div>
