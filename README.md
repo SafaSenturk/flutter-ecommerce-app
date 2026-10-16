@@ -152,8 +152,8 @@ Bu tarz bir uygulamaya mı ihtiyacın var? Kendi ürünlerin, ödeme altyapın v
 
 Bu uygulamadaki şu parçaları başka projelerde de kullanılabilsin diye **[Plugins](https://github.com/SafaSenturk/Plugins)** reposuna ekledim. Oradan erişip kendi projene kopyalayabilirsin:
 
-- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/flutter-payment-card)**: Luhn, marka, son kullanma ve CVV doğrulama + CVV'de dönen animasyonlu kart.
-- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/flutter-motion-kit)**: yükleniyor iskeleti (Shimmer), boş/hata ekranı (MessageView) ve diğer hareketli parçalar.
+- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/mobile/flutter-payment-card)**: Luhn, marka, son kullanma ve CVV doğrulama + CVV'de dönen animasyonlu kart.
+- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/mobile/flutter-motion-kit)**: yükleniyor iskeleti (Shimmer), boş/hata ekranı (MessageView) ve diğer hareketli parçalar.
 
 ---
 
@@ -255,8 +255,8 @@ Need an app like this, with your own products, payment provider and design? **[s
 
 These parts of the app are available in the **[Plugins](https://github.com/SafaSenturk/Plugins)** repo, ready to copy into your own project:
 
-- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/flutter-payment-card)**: Luhn, brand, expiry and CVV validation + the animated card that flips for the CVV.
-- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/flutter-motion-kit)**: loading skeletons (Shimmer), empty/error views (MessageView) and other motion widgets.
+- **[flutter-payment-card](https://github.com/SafaSenturk/Plugins/tree/main/mobile/flutter-payment-card)**: Luhn, brand, expiry and CVV validation + the animated card that flips for the CVV.
+- **[flutter-motion-kit](https://github.com/SafaSenturk/Plugins/tree/main/mobile/flutter-motion-kit)**: loading skeletons (Shimmer), empty/error views (MessageView) and other motion widgets.
 
 ---
 
